@@ -1,0 +1,25 @@
+class Solution
+{
+    /****
+
+    [
+    [1, 2, 3], 
+    [3, 2, 1]    
+    ]
+    
+     */    
+    public int maximumWealth(int[][] accounts)
+    {
+        int res = 0;
+        for(int[] customer : accounts)  //Traversing through each row in accounts
+        {
+            int sum = 0;
+            for(int account : customer) 
+            {
+                sum += account;
+            }
+            res = Math.max(sum, res);
+        }
+        return res;    
+    }
+}
